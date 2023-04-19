@@ -1,10 +1,7 @@
-import './App.css';
+// import Navbar from './navigation/navBar';
 
 function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;
