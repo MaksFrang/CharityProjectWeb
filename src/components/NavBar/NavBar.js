@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { BiMenuAltRight } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";
-import "./navbar.scss";
+import React, { useEffect, useState } from 'react';
+import { BiMenuAltRight } from 'react-icons/bi';
+import { AiOutlineClose } from 'react-icons/ai';
+import { Link, useNavigate } from 'react-router-dom';
+import './navbar.scss';
 
 function Navbar() {
   const navigate = useNavigate();
@@ -18,9 +18,9 @@ function Navbar() {
         height: window.innerHeight,
       });
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
@@ -40,10 +40,9 @@ function Navbar() {
           Charity
         </Link>
         <nav
-          className={`${"header__content__nav"} 
-          ${menuOpen && size.width < 768 ? `${"isMenu"}` : ""} 
-          }`}
-        >
+          className={`${'header__content__nav'} 
+          ${menuOpen && size.width < 768 ? `${'isMenu'}` : ''} 
+          }`}>
           <ul>
             <li>
               <Link to="/">Home</Link>

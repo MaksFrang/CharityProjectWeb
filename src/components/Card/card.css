@@ -1,0 +1,41 @@
+.card-container {
+  max-width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: rgb(240, 240, 240);
+  border-radius: 2%;
+  max-width: 48.6%;
+  min-width: 350px;
+  padding: 10px;
+  margin: 0.7%;
+  font-size: 1.2rem;
+}
+
+.card-img {
+  max-width: 60px;
+  border-radius: 50%;
+}
+
+.card-header {
+  display: flex;
+}
+.card-title {
+  margin-right: auto;
+  font-size: 1.8rem;
+}
+
+.card-coordinates {
+  margin-top: 10px;
+}
+.card-lattitude {
+  margin: 2px 0;
+  font-weight: 700;
+}
+.card-longitude {
+  font-weight: 700;
+  margin-bottom: 7px;
+}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Card from '../Card/Card';
 import fakeApiCall from '../../dataComponents/getData';
 import dataStorage from '../../dataComponents/dataStorage';
@@ -6,13 +6,17 @@ import Navbar from '../NavBar/NavBar';
 
 function Home() {
   const [data, setData] = useState([]);
-  fakeApiCall(dataStorage).then((res) => setData(res));
+  useEffect(() => {
+    fakeApiCall(dataStorage).then((res) => setData(res));
+  }, [dataStorage]);
 
   return (
-    <body>
+    <div>
       <Navbar />
-		<Card data={data} />
-    </body>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop:'3.5%' }}>
+        <Card data={data} />
+      </div>
+    </div>
   );
 }
 

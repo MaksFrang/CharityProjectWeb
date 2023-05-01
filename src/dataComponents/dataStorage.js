@@ -6,6 +6,8 @@ function DataStorage() {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse explicabo, eius in dolor, doloribus molestias delectus reprehenderit perferendis unde illo architecto totam rem, incidunt accusamus odit laborum nostrum ab tenetur.',
 		lattitude: 'lattitude',
 		longitude: 'longitude',
+		rating: 2,
+		img: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
     },
     {
       id: 2,
@@ -13,6 +15,8 @@ function DataStorage() {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse explicabo, eius in dolor, doloribus molestias delectus reprehenderit perferendis unde illo architecto totam rem, incidunt accusamus odit laborum nostrum ab tenetur.',
 		lattitude: 'lattitude',
 		longitude: 'longitude',
+		rating: 3,
+		img: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
     },
     {
       id: 3,
@@ -20,6 +24,8 @@ function DataStorage() {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse explicabo, eius in dolor, doloribus molestias delectus reprehenderit perferendis unde illo architecto totam rem, incidunt accusamus odit laborum nostrum ab tenetur.',
 		lattitude: 'lattitude',
 		longitude: 'longitude',
+		rating: 5,
+		img: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
     },
     {
       id: 4,
@@ -27,6 +33,8 @@ function DataStorage() {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse explicabo, eius in dolor, doloribus molestias delectus reprehenderit perferendis unde illo architecto totam rem, incidunt accusamus odit laborum nostrum ab tenetur.',
 		lattitude: 'lattitude',
 		longitude: 'longitude',
+		rating: 4,
+		img: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
     },
     {
       id: 5,
@@ -34,6 +42,8 @@ function DataStorage() {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse explicabo, eius in dolor, doloribus molestias delectus reprehenderit perferendis unde illo architecto totam rem, incidunt accusamus odit laborum nostrum ab tenetur.',
 		lattitude: 'lattitude',
 		longitude: 'longitude',
+		rating: 1,
+		img: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
     },
     {
       id: 6,
@@ -41,6 +51,8 @@ function DataStorage() {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse explicabo, eius in dolor, doloribus molestias delectus reprehenderit perferendis unde illo architecto totam rem, incidunt accusamus odit laborum nostrum ab tenetur.',
 		lattitude: 'lattitude',
 		longitude: 'longitude',
+		rating: 5,
+		img: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
     },
 
   ];
