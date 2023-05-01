@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Rating, __esModule } from 'react-simple-star-rating';
+// import { useState } from 'react';
+import { Rating } from 'react-simple-star-rating';
 import './card.css';
 
 function Card({ data }) {
@@ -13,10 +13,10 @@ function Card({ data }) {
       <div className="card">
         <div className="card-header">
           <p className="card-title">{item.header}</p>
-          <img className="card-img" src={item.img} />
+          <img className="card-img" src={item.img} alt="avatar" />
         </div>
         <p className="card-description">{item.description}</p>
-		  <p className='card-coordinates'>Coordinates:</p>
+        <p className="card-coordinates">Coordinates:</p>
         <p className="card-lattitude">{item.lattitude}</p>
         <p className="card-longitude">{item.longitude}</p>
         <Rating

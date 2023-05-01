@@ -8,7 +8,7 @@ function Home() {
   const [data, setData] = useState([]);
   useEffect(() => {
     fakeApiCall(dataStorage).then((res) => setData(res));
-  }, [dataStorage]);
+  }, [data]);
 
   return (
     <div>
