@@ -1,0 +1,105 @@
+@import 'react-datepicker/dist/react-datepicker';
+
+.box {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.background {
+  position: absolute;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+.form {
+  max-width: 430px;
+  padding: 1.4rem;
+  margin: 0 2%;
+  width: 90%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form header {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.input {
+  height: 6vh;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 17px;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+.date-picker {
+  margin-top: 1.2rem;
+}
+.react-datepicker {
+  margin-bottom: -1.2rem;
+}
+.form input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.form a {
+  text-decoration: none;
+}
+.form a:hover {
+  text-decoration: underline;
+}
+.button {
+  color: #fff;
+  background: #787ff6;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: 1%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.login-button {
+  background: #1f2f98 !important;
+}
+.form input.button:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.inputfile {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+label.button {
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+label.button:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.signup-link {
+  color: #787ff6 !important;
+}
+.signup {
+  font-size: 17px;
+  text-align: center;
+}
+.signup label {
+  margin-left: 2%;
+  color: #1f2f98;
+  cursor: pointer;
+}
+.signup label:hover {
+  text-decoration: underline;
+}

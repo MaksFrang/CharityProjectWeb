@@ -10,15 +10,15 @@ function Card({ data }) {
 
   const posts = data.map((item) => {
     return (
-      <div className="card">
+      <div key={item.id} className="card">
         <div className="card-header">
           <p className="card-title">{item.header}</p>
           <img className="card-img" src={item.img} alt="avatar" />
         </div>
         <p className="card-description">{item.description}</p>
         <p className="card-coordinates">Coordinates:</p>
-        <p className="card-lattitude">{item.lattitude}</p>
-        <p className="card-longitude">{item.longitude}</p>
+        <p className="card-lattitude">lattitude: {item.lattitude}</p>
+        <p className="card-longitude">longitude: {item.longitude}</p>
         <Rating
           //  onClick={handleRating}
           ratingValue={item.rating}
