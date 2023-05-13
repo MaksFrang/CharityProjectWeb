@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router';
 import Navbar from '../NavBar/NavBar';
 import background from '../../assets/background.gif';
 import ReactDatePicker from 'react-datepicker';
+import Resizer from 'react-image-file-resizer';
 import './sign.css';
 import { useState } from 'react';
 
@@ -22,6 +23,7 @@ function SignUp() {
       data: date,
       image: file,
     };
+    console.log(user);
     // SignUpService(user).then(() => navigate("/signin"));
   };
 
@@ -39,25 +41,25 @@ function SignUp() {
       setFile(undefined);
       return;
     }
-    const result = await convertBase64(e.target.files[0]);
+    const result = await resizeFile(e.target.files[0]);
     setFile(result);
     e.target.value = '';
   };
-
-  const convertBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-
-      fileReader.onload = () => {
-        resolve(fileReader.result);
-      };
-
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
+  const resizeFile = (file) =>
+    new Promise((resolve) => {
+      Resizer.imageFileResizer(
+        file,
+        60,
+        60,
+        'JPEG',
+        100,
+        0,
+        (uri) => {
+          resolve(uri);
+        },
+        'base64',
+      );
     });
-  };
 
   const navigate = useNavigate();
   const goToLogIn = () => {

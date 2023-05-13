@@ -1,14 +1,16 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import { Rating } from 'react-simple-star-rating';
 import './card.css';
 
 function Card({ data }) {
-  //   const [rating, setRating] = useState(0);
-  //   const handleRating = (rate) => {
-  //     setRating(rate);
-  //   };
+  const [rating, setRating] = useState(0);
+  const [ind, setInd] = useState(0);
+  const handleRating = (rate, index) => {
+    setInd(index);
+    setRating(rate);
+  };
 
-  const posts = data.map((item) => {
+  const posts = data.map((item, index) => {
     return (
       <div key={item.id} className="card">
         <div className="card-header">
@@ -20,8 +22,9 @@ function Card({ data }) {
         <p className="card-lattitude">lattitude: {item.lattitude}</p>
         <p className="card-longitude">longitude: {item.longitude}</p>
         <Rating
-          //  onClick={handleRating}
-          ratingValue={item.rating}
+          onClick={(e) => handleRating(e, index)}
+          value={ind === index && rating}
+          initialValue={item.rating}
           size={20}
           label
           transition
