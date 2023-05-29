@@ -10,6 +10,7 @@ function Navbar() {
     width: 0,
     height: 0,
   });
+
   useEffect(() => {
     const handleResize = () => {
       setSize({
@@ -31,6 +32,10 @@ function Navbar() {
   const menuToggleHandler = () => {
     setMenuOpen((p) => !p);
   };
+  const logOut = () => {
+    return localStorage.clear();
+  };
+  const isSignedIn = localStorage.getItem('isLogged');
 
   return (
     <header className="header">
@@ -46,18 +51,33 @@ function Navbar() {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="/profile">Profile</Link>
-            </li>
-            <li>
-              <Link to="/help">Help</Link>
-            </li>
-            <Link to="/signin">
-              <button className="btn btn__login">Login</button>
-            </Link>
-            <Link to="/signup">
-              <button className="btn">Sign Up</button>
-            </Link>
+            {isSignedIn && (
+              <li>
+                <Link to="/profile">Profile</Link>
+              </li>
+            )}
+            {isSignedIn && (
+              <li>
+                <Link to="/addpost">Add post</Link>
+              </li>
+            )}
+            {!isSignedIn && (
+              <Link to="/signin">
+                <button className="btn btn__login">Login</button>
+              </Link>
+            )}
+            {!isSignedIn && (
+              <Link to="/signup">
+                <button className="btn">Sign Up</button>
+              </Link>
+            )}
+            {isSignedIn && (
+              <Link to="/signin">
+                <button onClick={logOut} className="btn">
+                  Log out
+                </button>
+              </Link>
+            )}
           </ul>
         </nav>
         <div className="header__content__toggle">

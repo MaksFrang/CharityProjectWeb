@@ -6,7 +6,7 @@
   align-items: center;
 }
 .card {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(244, 244, 244);
   border-radius: 2%;
   max-width: 48.6%;
   min-width: 350px;
@@ -22,10 +22,14 @@
 
 .card-header {
   display: flex;
+  text-transform: uppercase;
 }
 .card-title {
   margin-right: auto;
   font-size: 1.8rem;
+}
+.card-amount {
+  margin-top: 10px;
 }
 
 .card-coordinates {

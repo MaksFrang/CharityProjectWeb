@@ -5,6 +5,7 @@ import ReactDatePicker from 'react-datepicker';
 import Resizer from 'react-image-file-resizer';
 import './sign.css';
 import { useState } from 'react';
+import UserService from '../../services/userService';
 
 function SignUp() {
   const [date, setDate] = useState(new Date());
@@ -16,24 +17,25 @@ function SignUp() {
 
   const register = () => {
     const user = {
-      firstName: firstName,
-      secondName: secondName,
+      name: firstName,
+      surname: secondName,
       email: email,
       password: password,
-      data: date,
-      image: file,
+      date: date,
+      avatar: file,
+		gender: true,
     };
-    console.log(user);
-    // SignUpService(user).then(() => navigate("/signin"));
+
+    UserService.UserSignUp(user).then(() => navigate('/signin'));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    //  console.log({
+    //    email: data.get('email'),
+    //    password: data.get('password'),
+    //  });
   };
 
   const onSelectFile = async (e) => {

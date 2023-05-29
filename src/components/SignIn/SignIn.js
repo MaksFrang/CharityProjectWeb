@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 import Navbar from '../NavBar/NavBar';
 import '../SignUp/sign.css';
 import background from '../../assets/background.gif';
+import UserService from '../../services/userService';
 
 function SignIn() {
   const [Email, setEmail] = useState();
@@ -13,11 +14,11 @@ function SignIn() {
       Email: Email,
       Password: Password,
     };
-    //  SignInService(user).then((res) => {
-    //    localStorage.setItem('isLogged', true);
-    //    localStorage.setItem('User', JSON.stringify(res.data));
-    //    navigate('/');
-    //  });
+    UserService.UserSignIn(user).then((res) => {
+      localStorage.setItem('isLogged', true);
+      localStorage.setItem('User', JSON.stringify(res.data));
+      navigate('/');
+    });
   }
 
   const navigate = useNavigate();

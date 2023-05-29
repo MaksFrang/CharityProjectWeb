@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { Rating } from 'react-simple-star-rating';
+// import { useState } from 'react';
+// import { Rating } from 'react-simple-star-rating';
 import './card.css';
 
 function Card({ data }) {
-  const [rating, setRating] = useState(0);
-  const [ind, setInd] = useState(0);
-  const handleRating = (rate, index) => {
-    setInd(index);
-    setRating(rate);
-  };
+//   const [rating, setRating] = useState(0);
+//   const [ind, setInd] = useState(0);
+//   const handleRating = (rate, index) => {
+//     setInd(index);
+//     setRating(rate);
+//   };
 
   const posts = data.map((item, index) => {
     return (
@@ -18,10 +18,11 @@ function Card({ data }) {
           <img className="card-img" src={item.img} alt="avatar" />
         </div>
         <p className="card-description">{item.description}</p>
+        <p className="card-amount">Reqired contribution amount: {item.money}$</p>
         <p className="card-coordinates">Coordinates:</p>
         <p className="card-lattitude">lattitude: {item.lattitude}</p>
-        <p className="card-longitude">longitude: {item.longitude}</p>
-        <Rating
+        <p className="card-longitude">longtitude: {item.longtitude}</p>
+        {/* <Rating
           onClick={(e) => handleRating(e, index)}
           value={ind === index && rating}
           initialValue={item.rating}
@@ -31,7 +32,7 @@ function Card({ data }) {
           fillColor="orange"
           emptyColor="gray"
           className="foo"
-        />
+        /> */}
       </div>
     );
   });

@@ -8,12 +8,12 @@
 }
 
 .header {
-  background: #7BD5F5;
+  background: #7bd5f5;
   width: 100%;
   height: 100px;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   @include breakpoint(md) {
-    padding: 0 3rem;
+    padding: 0 1rem;
   }
   transition: 0.3s ease all;
 
@@ -101,28 +101,28 @@
       .btn {
         cursor: pointer;
         outline: none;
-        padding: 0.75rem 1.25rem;
+        padding: 0.4rem 0.7rem;
         border-radius: 12px;
         font-size: 1rem;
         font-family: inherit;
-        background: #787FF6;
-        color: #FFF;
+        background: #787ff6;
+        color: #fff;
         border: 1px solid transparent;
         transition: 0.3s ease all;
         margin: 0.5em 0.5em;
 
-      //   &:hover {
-      //     border-color: rgb(162, 162, 246);
-      //     background: rgba(rgb(162, 162, 246), 0.1);
-      //     color: rgb(162, 162, 246);
-      //   }
-      //   &:active {
-      //     border-color: rgb(162, 162, 246);
-      //     background: linear-gradient(rgba(rgb(162, 162, 246), 0.2), rgba(rgb(162, 162, 246), 0.3));
-      //     color: rgb(162, 162, 246);
-      //   }
+        //   &:hover {
+        //     border-color: rgb(162, 162, 246);
+        //     background: rgba(rgb(162, 162, 246), 0.1);
+        //     color: rgb(162, 162, 246);
+        //   }
+        //   &:active {
+        //     border-color: rgb(162, 162, 246);
+        //     background: linear-gradient(rgba(rgb(162, 162, 246), 0.2), rgba(rgb(162, 162, 246), 0.3));
+        //     color: rgb(162, 162, 246);
+        //   }
         &__login {
-          background-color: #1F2F98;
+          background-color: #1f2f98;
           color: #fff;
         }
       }
