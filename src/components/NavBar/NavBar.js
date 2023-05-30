@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+
+import logoPng from '../../assets/logoPng.png';
+import logo_mp4 from '../../assets/logo.mp4';
+
 import './navbar.scss';
 
 function Navbar() {
@@ -40,8 +44,9 @@ function Navbar() {
   return (
     <header className="header">
       <div className="header__content">
-        <Link to="/" className="header__content__logo">
-          Charity
+        <Link to="/" className="header-content-logo">
+          <img src={logoPng} className="logoPng" alt="logo" />
+          <video src={logo_mp4} width={150} muted autoPlay={true} loop></video>
         </Link>
         <nav
           className={`${'header__content__nav'} 
@@ -53,7 +58,7 @@ function Navbar() {
             </li>
             {isSignedIn && (
               <li>
-                <Link to="/profile">Profile</Link>
+                <Link to="/userprofile">Profile</Link>
               </li>
             )}
             {isSignedIn && (
